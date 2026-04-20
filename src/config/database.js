@@ -9,3 +9,4 @@ const sequelizeConn = new Sequelize(`
 );
 
 module.exports = sequelizeConn;
+
