@@ -1,22 +1,21 @@
-const PedidoController = require('../controllers/Pedidos_controller');
+const ItemController = require('../controllers/item_controllers')
 
-function route(app) {
-  app.get('/pedido', (req, res) => {
-    PedidoController.index(req, res);
-  });
-  app.get('/pedido/:id', (req, res) => {
-    PedidoController.show(req, res);
-  });
-  app.post('/pedido', (req, res) => {
-    PedidoController.create(req, res)
-  });
-  app.put('/pedido/:id', (req, res) => {
-    PedidoController.update(req, res);
-  });
-  
-  app.delete('/pedido/:id', (req, res) => {
-    PedidoController.delete(req, res);
-  });
+function route(app){
+     app.get("/item", (req, res)=>{
+        ItemController.index(req, res)
+     });
+     app.get("/item/:id", (req, res)=>{
+        ItemController.show(req, res)
+     });
+     app.post('/item', (req, res)=>{
+        ItemController.create(req, res);
+     });
+     app.put('/item/:id', (req, res)=>{
+        ItemController.update(req, res);
+     });
+     app.delete('/item/:id', (req, res)=>{
+        ItemController.delete(req, res);
+     })
 }
+module.exports = route
 
-module.exports = route;
