@@ -21,6 +21,14 @@ const Pedido = connection.define(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    itemId:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references:{
+        model: "Item",
+        key: "id"
+      }
+    }
   },
   {
     tableName: 'pedidos',

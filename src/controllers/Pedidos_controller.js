@@ -42,13 +42,13 @@ class PedidoController {
   //   res.send(JSON.stringify({ success: true }));
   // }
 
-  // static async delete(req, res) {
-  //   const { id } = req.params;
-  //   let patient = await Patient.findByPk(id);
-  //   patient.destroy();
+  static async delete(req, res) {
+    const { id } = req.params;
+    let patient = await Patient.findByPk(id);
+    patient.destroy();
 
-  // res.send(JSON.stringify({ success: true }));
-  // }
+  res.send(JSON.stringify({ success: true }));
+  }
 }
 
 module.exports = PedidoController;

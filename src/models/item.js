@@ -23,6 +23,7 @@ const Item = connection.define("Item", {
         type: DataTypes.DECIMAL(10,2),
         allowNull: false
     },
+    
 },
     {
         tableName: "itens",
