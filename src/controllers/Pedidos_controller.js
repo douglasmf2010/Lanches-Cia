@@ -11,7 +11,7 @@ class PedidoController {
 
   static async show(req, res) {
     const { id } = req.params;
-    let pedido = await Pedido.findAll({ id: id });
+    let pedido = await Pedido.findByPk( id );
     // let code = patient.length == 0 ? 404 : 200;
     res.send(JSON.stringify(pedido));
   }
